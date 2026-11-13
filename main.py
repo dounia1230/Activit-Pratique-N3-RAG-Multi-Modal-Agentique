@@ -2,12 +2,15 @@
 
 import argparse
 import json
+import sys
 from pathlib import Path
 
 from rag_pipeline import RAGPipeline
 
 
 def main():
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description="RAG multimodal local")
     parser.add_argument("--data-dir", type=Path, default=None)
     commands = parser.add_subparsers(dest="commande", required=True)

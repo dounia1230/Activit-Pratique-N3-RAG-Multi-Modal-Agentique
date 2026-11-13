@@ -53,6 +53,8 @@ async def interroger_mcp(texte=None, image=None, type_resultat="tous", k=6, raci
 
 
 def main():
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description="Agent documentaire utilisant le RAG via MCP stdio")
     parser.add_argument("question", nargs="?")
     parser.add_argument("--image", type=Path)
