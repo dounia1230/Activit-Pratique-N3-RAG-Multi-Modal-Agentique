@@ -1,0 +1,25 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Reference course notebook: keep local, never publish.
+/rag_multimodal_agentique.ipynb
+/.local-backups/
+
+# Local documents, extracted assets, indexes and notebook outputs.
+/pdfs/
+/resultats_pdf/
+/chroma_pdf/
+.ipynb_checkpoints/
+uploads/
+.pytest_cache/
+.env
+.env.*
+!.env.example
